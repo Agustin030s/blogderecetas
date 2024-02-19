@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row, Table, Image } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemReceta from "./recetas/ItemReceta";
 
