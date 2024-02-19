@@ -18,7 +18,7 @@
     align-items: flex-start !important;
 }
 
-.headerInfo span{
+.headerInfo  span{
     color: rgb(255, 123, 0);
 }
 
@@ -45,4 +45,24 @@
 .headerImg img{
     height: 600px;
     border-radius: 25px 5px 150px 50px;
+}
+
+.conocenosInfo h2{
+    font-size: 48px;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.conocenosInfo p{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.conocenosIMG img{
+    border-radius: 5px 200px;
+}
+
+.conocenosInfo span{
+    color: rgb(255, 123, 0);
 }
