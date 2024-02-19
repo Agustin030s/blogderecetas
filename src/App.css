@@ -66,3 +66,54 @@
 .conocenosInfo span{
     color: rgb(255, 123, 0);
 }
+
+
+
+.card{
+    max-width: 380px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 5px 8px 5px 0px rgba(186,171,171,0.75);
+-webkit-box-shadow: 5px 8px 5px 0px rgba(186,171,171,0.75);
+-moz-box-shadow: 5px 8px 5px 0px rgba(186,171,171,0.75);
+}
+
+.cardIMG img{
+    border-radius: 15px;
+}
+
+.cardTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cardTitle p{
+    padding: 0px;
+}
+
+.cardBody p{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.cardFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardButton{
+    padding: 4px 16px;
+    border-radius: 8px;
+    background-color: rgb(255, 123, 0) ;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.separador{
+    background-color:rgb(255, 123, 0) ;
+}
