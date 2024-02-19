@@ -2,17 +2,17 @@ import { Button, Image } from "react-bootstrap";
 
 const ItemReceta = () => {
   return (
-    <tr>
+    <tr className="text-center">
       <td>1</td>
-      <td>Capuccino</td>
-      <td>$280</td>
+      <td>Tortilla de papas</td>
+      <td>45'</td>
       <td className="text-center">
         <Image
-          src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=1870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_kvh73gs5ar_tortilla-1024x683.jpg"
           className="imgTabla"
         ></Image>
       </td>
-      <td>Cafeteria</td>
+      <td>Lucia Barraza</td>
       <td className="text-center">
         <Button variant="warning" className="me-2 mb-2">
           <i className="bi bi-pencil-square"></i>
