@@ -8,9 +8,9 @@
 
 <p>Somos un grupo integrado por 3 personas</p>
 <ul>
-<p>Agustin Maza</p>
-<p>Lucia Barraza</p>
-<p>Cabello</p>
+<p>Agustin, Maza</p>
+<p>Lucia, Barraza</p>
+<p>Luciano, Cabello</p>
 </ul>
 
 ###
