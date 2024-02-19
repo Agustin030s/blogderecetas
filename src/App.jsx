@@ -1,9 +1,11 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Header } from './components/common/Header'
 
 function App() {
   return (
     <>
-      <h1>Hola mundo</h1>
+      <Header/>
     </>
   )
 }

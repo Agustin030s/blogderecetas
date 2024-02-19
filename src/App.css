@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    position: relative;
+    height: 100vh;
+    background-image: url("../src/assets/img/bgHeader.png");
+    color: white; 
+    
+}
+
+.headerInfo{
+    width: 50%;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+
+.headerInfo span{
+    color: rgb(255, 123, 0);
+}
+
+.headerInfo h2{
+    font-size: 99px !important;
+    line-height: 90px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.headerInfo p{
+    font-size: 24px;
+    line-height: 34px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: start;
+}
+
+.headerImg{
+    overflow: hidden;
+}
+
+
+.headerImg img{
+    height: 600px;
+    border-radius: 25px 5px 150px 50px;
+}
