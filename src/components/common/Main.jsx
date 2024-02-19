@@ -20,7 +20,7 @@ export const Main = () => {
                 <p><br /></p>
             </div>
             <section>
-                
+                <h2>Recetas mas Buscadas</h2>
             </section>
         </main>  
 )
