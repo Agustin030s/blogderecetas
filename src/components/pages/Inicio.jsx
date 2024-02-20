@@ -1,11 +1,15 @@
-import React from 'react'
+import { Button } from 'react-bootstrap'
 import conocenosIMG from "../../assets/img/ConocenosIMG.jpg"
-import { RecetasCards } from '../RecetasCards'
+import RecetasCards from './recetas/RecetasCards';
+import Header from '../common/Header';
 
-export const Main = () => {
+
+const Inicio = () => {
   return (
-        <main>
-            <section className='container d-flex my-5 gap-5 sectionConocenos'>
+    <>
+    <Header></Header>
+    <main>
+            <section className='container d-flex my-5 gap-5 sectionConocenos '>
                 <div className='d-flex flex-column justify-content-center gap-3 conocenosInfo'>
                     <h2>Bienvenido a <span>El Rincón Gourmet</span> <br /> tu lugar culinario definitivo </h2>
                     <hr />
@@ -19,21 +23,23 @@ export const Main = () => {
             <div className='separador'>
                 <br />
             </div>
-            <section className='container py-5'>
-                <h2>Recetas mas Buscadas</h2>
-                <div className='d-flex flex-wrap gap-5 justify-content-center'>
-                <RecetasCards/>
-                <RecetasCards/>
-                <RecetasCards/>
-                <RecetasCards/>
-                <RecetasCards/>
-                <RecetasCards/>
-
+            <section className='container py-5   '>
+                <h2 className='text-center my-3'>Recetas más Buscadas</h2>
+                <div className='d-flex flex-wrap gap-5 sectionRecetas'>
+                <RecetasCards></RecetasCards>
+                <RecetasCards></RecetasCards>
+                <RecetasCards></RecetasCards>
+                <RecetasCards></RecetasCards>
+                <RecetasCards></RecetasCards>
+                <RecetasCards></RecetasCards>
                 </div>
             </section>
             <div className='separador'>
                 <br />
             </div>
         </main>  
-)
-}
+    </>
+  );
+};
+
+export default Inicio;

@@ -1,0 +1,22 @@
+{
+    "recetas":[
+        {
+            "nombreReceta": "Tortilla de papas",
+            "descripcionBreve": "Aprende a preparar esta receta de Tortilla de Papas Tradicional, por Estefanía Colombo en elGourmet",
+            "duracion": "45'",
+            "ingredientes": "papa, cebolla, huevo",
+            "preparacion": "se debe hervir la papa, etc etc",
+            "porciones": 4,
+            "imagen": "https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_kvh73gs5ar_tortilla-1024x683.jpg",
+            "autor": "Lucia Barraza"
+        }
+    ],
+    "usuarios": [
+        {
+            "email": "admin@admin.com",
+            "usuario": "Administrador",
+            "rol": "Administrador",
+            "password": "Admin1234"
+        }
+    ]
+}

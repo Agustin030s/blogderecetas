@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.imgTabla{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
 .headerContainer {
     position: relative;
     height: 100vh;
@@ -141,7 +147,7 @@
     }
 
     .sectionConocenos{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .conocenosIMG{
@@ -168,6 +174,10 @@
         width: 200px;
         height: 200px;
         
+    }
+
+    .sectionRecetas{
+        justify-content: center;
     }
 
     .cardValues{

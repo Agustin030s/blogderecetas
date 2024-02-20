@@ -36,3 +36,5 @@ export const RecetasCards = () => {
     </div>
   )
 }
+
+export default RecetasCards;
