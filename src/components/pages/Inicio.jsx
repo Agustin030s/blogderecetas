@@ -1,10 +1,13 @@
 import { Button } from 'react-bootstrap'
 import conocenosIMG from "../../assets/img/ConocenosIMG.jpg"
 import RecetasCards from './recetas/RecetasCards';
+import Header from '../common/Header';
 
 
 const Inicio = () => {
   return (
+    <>
+    <Header></Header>
     <main>
             <section className='container d-flex my-5 gap-5'>
                 <div className='d-flex flex-column justify-content-center gap-3 conocenosInfo'>
@@ -35,6 +38,7 @@ const Inicio = () => {
                 <br />
             </div>
         </main>  
+    </>
   );
 };
 
