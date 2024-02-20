@@ -1,12 +1,11 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import conocenosIMG from "../../assets/img/ConocenosIMG.jpg"
 import { RecetasCards } from '../RecetasCards'
 
 export const Main = () => {
   return (
         <main>
-            <section className='container d-flex my-5 gap-5'>
+            <section className='container d-flex my-5 gap-5 sectionConocenos'>
                 <div className='d-flex flex-column justify-content-center gap-3 conocenosInfo'>
                     <h2>Bienvenido a <span>El Rincón Gourmet</span> <br /> tu lugar culinario definitivo </h2>
                     <hr />
@@ -22,7 +21,7 @@ export const Main = () => {
             </div>
             <section className='container py-5'>
                 <h2>Recetas mas Buscadas</h2>
-                <div className='d-flex flex-wrap gap-5'>
+                <div className='d-flex flex-wrap gap-5 justify-content-center'>
                 <RecetasCards/>
                 <RecetasCards/>
                 <RecetasCards/>

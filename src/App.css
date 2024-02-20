@@ -90,12 +90,13 @@
 }
 
 .cardTitle p{
-    padding: 0px;
+    margin: 0px;
 }
 
 .cardBody p{
     font-family: "Roboto", sans-serif;
     font-size: 18px;
+
 }
 
 .cardFooter{
@@ -116,4 +117,62 @@
 
 .separador{
     background-color:rgb(255, 123, 0) ;
+}
+
+@media (max-width: 991.98px){
+    .headerInfo{
+        width: 100%;
+        margin: 24px;
+    }
+
+    .headerInfo h2{
+        font-size: 32px !important;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .headerInfo p{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .headerImg{
+        display: none;
+    }
+
+    .sectionConocenos{
+        flex-direction: column-reverse;
+    }
+
+    .conocenosIMG{
+        margin: auto;
+    }
+
+    .conocenosIMG img{
+        width: 250px;
+        height: 250px;
+        border-radius: 25px;
+    }
+
+    .conocenosInfo h2{
+        text-align: center;
+    }
+
+    .cardHeader{
+        flex-direction: column;
+    }
+    .cardIMG{
+        margin: auto;
+    }
+    .cardIMG img{
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .cardValues{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
