@@ -1,6 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el archivo CSS de Bootstrap
-import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap'; // Importa los componentes de Navbar y Nav de react-bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
 
 export const Navbar = () => {
   return (
@@ -19,6 +19,7 @@ export const Navbar = () => {
     </Navbar>
   )
 }
+
 
 export default Navbar;
 
