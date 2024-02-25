@@ -1,6 +1,6 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearRecetaAPI } from "../../../helpers/queries";
+import { crearRecetaAPI, editarRecetaAPI } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 
 const RecetasForm = ({ titulo, editar }) => {
@@ -13,7 +13,7 @@ const RecetasForm = ({ titulo, editar }) => {
 
   const onSubmit = async (receta) => {
     if (editar) {
-      console.log(receta);
+      editarRecetaAPI()
     } else {
       const respuesta = await crearRecetaAPI(receta);
       if (respuesta.status === 201) {

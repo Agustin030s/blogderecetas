@@ -28,8 +28,8 @@ export const crearRecetaAPI = async (recetaNueva) =>{
 
 export const editarRecetaAPI = async () => {
     try {
-        
+        console.log("Se esta editando la receta")
     } catch (error) {
-        
+        console.log("El error es: ", error)
     }
 }
