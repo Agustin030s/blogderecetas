@@ -1,6 +1,8 @@
 import { Button, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ItemReceta = ({receta}) => {
+  
   return (
     <tr className="text-center">
       <td>{receta.id}</td>
@@ -14,9 +16,9 @@ const ItemReceta = ({receta}) => {
       </td>
       <td>{receta.autor}</td>
       <td className="text-center">
-        <Button variant="warning" className="me-2 mb-2">
+        <Link to={`/administrador/editar/` + receta.id} className="btn btn-warning me-2 mb-2">
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="danger" className="me-2 mb-2">
           <i className="bi bi-trash3"></i>
         </Button>
