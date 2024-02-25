@@ -1,4 +1,3 @@
-import { Button } from 'react-bootstrap'
 import conocenosIMG from "../../assets/img/ConocenosIMG.jpg"
 import RecetasCards from './recetas/RecetasCards';
 import Header from '../common/Header';
