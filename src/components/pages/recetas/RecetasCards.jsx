@@ -11,8 +11,10 @@ export const RecetasCards = () => {
             </div>
             <div className='cardTitle'>
                 <h4>Cheese Burguer con verduras</h4>
+                <div className='cardValues'>
                 <p>240 Calorias</p>
                 <p>4.6/5</p>
+                </div>
             </div>
         </div>
         <hr />
