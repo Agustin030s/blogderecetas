@@ -1,8 +1,30 @@
 import { Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemReceta from "./recetas/ItemReceta";
+import { useEffect, useState } from "react";
+import { obtenerRecetasAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const Administrador = () => {
+  const [recetas, setRecetas] = useState([]);
+
+  useEffect(() =>{
+    obtenerRecetas();
+  }, [])
+
+  const obtenerRecetas = async () =>{
+    const respuesta = await obtenerRecetasAPI();
+    if(respuesta.status === 200){
+      const datos = await respuesta.json();
+      setRecetas(datos);
+    }else{
+      Swal.fire({
+        title: "Ocurrio un error",
+        text: `Intenta está operación en unos minutos`,
+        icon: "error"
+      });
+    }
+  }
   return (
     <Container className="my-4 mainContainer">
       <Row className="align-items-center justify-content-sm-center">
@@ -26,8 +48,7 @@ const Administrador = () => {
           <th>Opciones</th>
         </thead>
         <tbody>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
+          {recetas.map((receta) => <ItemReceta key={receta.id} receta={receta}></ItemReceta>)}
         </tbody>
       </Table>
     </Container>

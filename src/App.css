@@ -8,6 +8,10 @@
     background: rgb(255, 123, 0);
 }
 
+.nomReceta{
+    max-width: 200px;
+}
+
 .imgTabla{
     width: 150px;
     height: 150px;
