@@ -1,4 +1,14 @@
-const URI_Recetas = import.meta.env.API_RECETAS;
+const URI_Recetas = import.meta.env.VITE_API_RECETAS;
+
+
+export const obtenerRecetasAPI = async () =>{
+    try {
+        const respuesta = await fetch(URI_Recetas);
+        return respuesta;
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 export const crearRecetaAPI = async (recetaNueva) =>{
     try {
@@ -9,7 +19,6 @@ export const crearRecetaAPI = async (recetaNueva) =>{
             },
             body: JSON.stringify(recetaNueva),
         });
-        console.log(respuesta);
         return respuesta;
     } catch (error) {
         console.log(error);
