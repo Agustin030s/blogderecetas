@@ -28,8 +28,15 @@ const RecetasForm = ({ titulo, editar }) => {
     console.log(id)
    const respuesta = await obtenerRecetaUnica(id)
    if (respuesta.status === 200) {
-      const recetaBuscada = await respuesta.json()
-      setValue("")
+     const recetaBuscada = await respuesta.json()
+     setValue("nombreReceta", recetaBuscada.nombreReceta);
+     setValue("descripcionBreve", recetaBuscada.descripcionBreve);
+     setValue("duracion", recetaBuscada.duracion);
+     setValue("ingredientes", recetaBuscada.ingredientes);
+     setValue("preparacion", recetaBuscada.preparacion);
+     setValue("porciones", recetaBuscada.porciones);
+     setValue("imagen", recetaBuscada.imagen);
+     setValue("autor", recetaBuscada.autor);
    }
   }
 
