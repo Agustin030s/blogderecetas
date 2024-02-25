@@ -33,3 +33,14 @@ export const editarRecetaAPI = async () => {
         console.log("El error es: ", error)
     }
 }
+
+export const obtenerRecetaUnica = async (id) => {
+    try {
+        const respuesta = await fetch(`${URI_Recetas}/${id}`)
+        console.log(respuesta)
+        return respuesta
+    } catch (error) {
+        console.log("El error es:", error)
+    }
+}
+

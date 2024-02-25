@@ -1,15 +1,37 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearRecetaAPI, editarRecetaAPI } from "../../../helpers/queries";
+import { crearRecetaAPI, editarRecetaAPI, obtenerRecetaUnica } from "../../../helpers/queries";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const RecetasForm = ({ titulo, editar }) => {
+
+  const {id} = useParams()
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue
   } = useForm();
+
+  useEffect(() => {
+    if(editar){
+      cargarRecetaUnica()
+    }
+  }, [])
+  
+
+  const cargarRecetaUnica = async () => {
+    console.log(id)
+   const respuesta = await obtenerRecetaUnica(id)
+   if (respuesta.status === 200) {
+      const recetaBuscada = await respuesta.json()
+      setValue("")
+   }
+  }
 
   const onSubmit = async (receta) => {
     if (editar) {
