@@ -1,9 +1,34 @@
 import conocenosIMG from "../../assets/img/ConocenosIMG.jpg"
 import RecetasCards from './recetas/RecetasCards';
 import Header from '../common/Header';
+import { useEffect, useState } from "react";
+import { obtenerRecetasAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
+
 
 
 const Inicio = () => {
+
+    const [Recetas, setRecetas] = useState([])
+
+    useEffect(() => {
+        obtenerRecetas()
+    }, [])
+
+    const obtenerRecetas = async () =>{
+        const respuesta = await obtenerRecetasAPI()
+        if(respuesta.status === 200){
+            const datos = await respuesta.json();
+            setRecetas(datos);
+          }else{
+            Swal.fire({
+              title: "Ocurrio un error",
+              text: `Intenta está operación en unos minutos`,
+              icon: "error"
+            });
+          }
+    }
+    
   return (
     <>
     <Header></Header>
@@ -25,12 +50,8 @@ const Inicio = () => {
             <section className='container py-5   '>
                 <h2 className='text-center my-3'>Recetas más Buscadas</h2>
                 <div className='d-flex flex-wrap gap-5 sectionRecetas'>
-                <RecetasCards></RecetasCards>
-                <RecetasCards></RecetasCards>
-                <RecetasCards></RecetasCards>
-                <RecetasCards></RecetasCards>
-                <RecetasCards></RecetasCards>
-                <RecetasCards></RecetasCards>
+                {Recetas.map((receta) => <RecetasCards key={receta.id} receta={receta}></RecetasCards>)}
+
                 </div>
             </section>
             <div className='separador'>
