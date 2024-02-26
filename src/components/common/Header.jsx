@@ -12,7 +12,7 @@ export const Header = () => {
                 <h2>Cocina Deliciosas comidas con <span>El rincon Gourmet</span></h2>
                 <p>¿Sos un amante de la buena comida? Entonces aqui encontraste tu nuevo lugar favorito.</p>
 
-                <Button variant='primary'>Ir a las recetas.</Button>
+                <Button href='#recetas' variant='primary'>Ir a las recetas.</Button>
             </div>
             <div className='headerImg'>
                 <img src={headerIMG} alt="Comida deliciosa"  />

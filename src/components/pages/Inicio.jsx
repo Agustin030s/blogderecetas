@@ -47,7 +47,7 @@ const Inicio = () => {
             <div className='separador'>
                 <br />
             </div>
-            <section className='container py-5   '>
+            <section className='container py-5' id="recetas">
                 <h2 className='text-center my-3'>Recetas más Buscadas</h2>
                 <div className='d-flex flex-wrap gap-5 sectionRecetas'>
                 {Recetas.map((receta) => <RecetasCards key={receta.id} receta={receta}></RecetasCards>)}
