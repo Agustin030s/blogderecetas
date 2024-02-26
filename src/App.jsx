@@ -7,6 +7,7 @@ import Footer from "./components/common/Footer";
 import Inicio from "./components/pages/Inicio";
 import Error404 from "./components/pages/Error404";
 import RecetasForm from "./components/pages/recetas/RecetasForm";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/administrador/crear" element={<RecetasForm titulo="Nueva Receta" editar={false}></RecetasForm>}></Route>
         <Route exact path="/administrador/editar/:id" element={<RecetasForm titulo="Editar Receta" editar={true}></RecetasForm>}></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
+        <Route path="/login/" element={<Login/>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
