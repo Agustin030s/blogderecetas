@@ -23,7 +23,7 @@
     height: 100vh;
     background-image: url("../src/assets/img/bgHeader.png");
     color: white; 
-    
+    padding-top: 25px;
 }
 
 .headerInfo{
@@ -79,6 +79,14 @@
 
 .conocenosInfo span{
     color: rgb(255, 123, 0);
+}
+
+#navCOLORES{
+    background-color: rgb(107, 30, 34)!important;
+    border-radius: 25px 25px 5px 5px;
+    font-size: 18px;
+    width: 55vw;
+    margin: auto;
 }
 
 
@@ -141,7 +149,7 @@
 }
 
 .separador{
-    background-color:rgb(255, 123, 0) ;
+    background-color:rgb(107, 30, 34) ;
 }
 
 @media (max-width: 991.98px){
