@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import error404IMG from "../../assets/img/error404IMG.png"
 
-
 const Error404 = () => {
     return (
         <section class="container my-3">
