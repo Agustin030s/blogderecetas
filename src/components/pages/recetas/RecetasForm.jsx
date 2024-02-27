@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { crearRecetaAPI, editarRecetaAPI, obtenerRecetaUnica } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const RecetasForm = ({ titulo, editar }) => {
 
@@ -40,9 +40,27 @@ const RecetasForm = ({ titulo, editar }) => {
    }
   }
 
+  const navegacion = useNavigate()
+
   const onSubmit = async (receta) => {
     if (editar) {
-      editarRecetaAPI()
+      const respuesta = await editarRecetaAPI(receta, id)
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "Receta Modificada",
+          text: `La receta "${receta.nombreReceta}" fue modificada correctamente`,
+          icon: "success",
+        });
+
+        navegacion("/administrador")
+      }
+      else{
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: `La receta "${receta.nombreReceta}" no pudo ser creada, intentelo nuevamente dentro de unos minutos`,
+          icon: "error",
+        });
+      }
     } else {
       const respuesta = await crearRecetaAPI(receta);
       if (respuesta.status === 201) {

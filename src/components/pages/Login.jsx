@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "../../Login.css"
+import "../common/Menu"
+import Menu from '../common/Menu';
 
 
 const Login = () => {
@@ -21,6 +23,8 @@ const Login = () => {
     console.log("Iniciando Sesion")
   }
   return (
+    <>
+    <Menu></Menu>
     <div className={`container containerLogin ${isSignInActive ? 'right-panel-active' : ''}`}>
       <div className="form-container sign-up-container">
         <form action="#">
@@ -67,6 +71,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

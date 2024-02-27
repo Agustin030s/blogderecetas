@@ -28,11 +28,18 @@ export const crearRecetaAPI = async (recetaNueva) =>{
     }
 }
 
-export const editarRecetaAPI = async () => {
+export const editarRecetaAPI = async (receta, id) => {
     try {
-        console.log("Se esta editando la receta")
+        const respuesta = await fetch(`${URI_Recetas}/${id}`,{
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(receta),
+        });
+        return respuesta;
     } catch (error) {
-        console.log("El error es: ", error)
+        console.log(error);
     }
 }
 
