@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ItemReceta from "./recetas/ItemReceta";
 import { useEffect, useState } from "react";
 import { obtenerRecetasAPI } from "../../helpers/queries";
+import Menu from "../common/Menu"
 import Swal from "sweetalert2";
 
 const Administrador = () => {
@@ -27,6 +28,8 @@ const Administrador = () => {
   }
   
   return (
+    <>
+    <Menu></Menu>
     <Container className="my-4 mainContainer">
       <Row className="align-items-center justify-content-sm-center">
         <Col md="8">
@@ -53,6 +56,7 @@ const Administrador = () => {
         </tbody>
       </Table>
     </Container>
+    </>
   );
 };
 
