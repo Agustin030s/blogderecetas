@@ -1,12 +1,12 @@
 import { Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { borrarRecetaAPI, obtenerRecetasAPI } from "../../../helpers/queries";
 
-const ItemReceta = ({receta}) => {
-
-  const borrarReceta = () =>{
+const ItemReceta = ({ receta, setRecetas }) => {
+  const borrarReceta = () => {
     Swal.fire({
-      title: "¿Estás seguro de eliminar este producto?",
+      title: "¿Estás seguro de eliminar esta receta?",
       text: "No se puede revertir este paso",
       icon: "warning",
       showCancelButton: true,
@@ -16,19 +16,17 @@ const ItemReceta = ({receta}) => {
       cancelButtonText: "Cancelar",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        //agregar la logica que borre un producto mediante la api
-        const respuesta = await borrarProductoAPI(producto.id);
+        const respuesta = await borrarRecetaAPI(receta.id);
         if (respuesta.status === 200) {
           Swal.fire({
-            title: "Producto eliminado!",
-            text: `El producto "${producto.nombreProducto}" fue eliminado correctamente`,
+            title: "Receta eliminada!",
+            text: `La receta "${receta.nombreReceta}" fue eliminada correctamente`,
             icon: "success",
           });
-          //actualizar tabla admin
-          const respuestaProductos = await leerProductoAPI();
-          if (respuestaProductos.status === 200) {
-            const productosRestantes = await respuestaProductos.json();
-            setProductos(productosRestantes);
+          const respuestaRecetas = await obtenerRecetasAPI();
+          if (respuestaRecetas.status === 200) {
+            const recetasRestantes = await respuestaRecetas.json();
+            setRecetas(recetasRestantes);
           } else {
             Swal.fire({
               title: "Ocurrio un error",
@@ -45,22 +43,22 @@ const ItemReceta = ({receta}) => {
         }
       }
     });
-  }
-  
+  };
+
   return (
     <tr className="text-center">
       <td>{receta.id}</td>
       <td className="text-truncate nomReceta">{receta.nombreReceta}</td>
       <td>{receta.duracion}'</td>
       <td className="text-center">
-        <Image
-          src={receta.imagen}
-          className="imgTabla"
-        ></Image>
+        <Image src={receta.imagen} className="imgTabla"></Image>
       </td>
       <td>{receta.autor}</td>
       <td className="text-center">
-        <Link to={`/administrador/editar/` + receta.id} className="btn btn-warning me-2 mb-2">
+        <Link
+          to={`/administrador/editar/` + receta.id}
+          className="btn btn-warning me-2 mb-2"
+        >
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger" className="me-2 mb-2" onClick={borrarReceta}>
