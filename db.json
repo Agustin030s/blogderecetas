@@ -1,17 +1,6 @@
 {
   "recetas": [
     {
-      "nombreReceta": "Tortilla de papas",
-      "descripcionBreve": "Aprende a preparar esta receta de Tortilla de Papas Tradicional, por Estefanía Colombo en elGourmet",
-      "duracion": 45,
-      "ingredientes": "papa, cebolla, huevo",
-      "preparacion": "se debe hervir la papa, etc etc",
-      "porciones": "5",
-      "imagen": "https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_kvh73gs5ar_tortilla-1024x683.jpg",
-      "autor": "Lucia Barraza",
-      "id": "49b6"
-    },
-    {
       "nombreReceta": "Lomo de res con salsa barbacoa casera, patatas asadas y cebolla caramelizada",
       "descripcionBreve": "¿Qué podría ser más acogedor que un sabroso filete con patatas asadas y cebolla caramelizada en una reunión festiva?",
       "duracion": "120",
