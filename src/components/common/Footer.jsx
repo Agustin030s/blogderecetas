@@ -1,7 +1,9 @@
-import React from 'react'
-
-export const Footer = () => {
+const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+      <footer className="text-center bg-colorN text-light py-2">
+          <p className="m-0 lead">&copy; El Rincon Gourmet -  Todos los derechos reservados</p>
+      </footer>
+  );
+};
+
+export default Footer;
